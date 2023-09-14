@@ -18,7 +18,7 @@ services:
     depends_on:
       - db
     volumes:
-      - "../www/:/var/www/html"
+      - "../volume/:/var/www/"
     ports:
       - 80:80
       - 443:443
