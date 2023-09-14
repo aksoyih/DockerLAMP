@@ -4,6 +4,8 @@ RUN apt-get update && apt-get install -y
 
 RUN apt install zip unzip -y
 
+COPY ../../php.ini /usr/local/etc/php/
+
 RUN curl -sS https://getcomposer.org/installer -o /tmp/composer-setup.php
 RUN php /tmp/composer-setup.php --install-dir=/usr/local/bin --filename=composer
 
